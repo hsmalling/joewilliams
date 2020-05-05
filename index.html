@@ -47,6 +47,8 @@
         $('#submit-your-name').val() = $.trim($('#submit-your-name').val());
 
         const form = document.forms['submit-to-google-sheet']
+        form.name.value = $.trim(form.name.value);
+        form.comments.value = $.trim(form.comments.value);
         form.addEventListener('submit', e => {
           e.preventDefault()
           // if ($.trim(form.name.value) == '') {
