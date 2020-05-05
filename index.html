@@ -43,15 +43,16 @@
       <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCQXG-RLwDfzZG23ZIDh_La7KUkwPoQdal6HaoSDkYDDdVzuA/exec'
         const form = document.forms['submit-to-google-sheet']
-        var escComments = $(form.comments.value).text();
-        var escName = $(form.name.value).text();
-        var formData = new FormData();
-        formData.append('name', escName);
-        formData.append('comments', escComments);
-
         form.addEventListener('submit', e => {
+          if ($.trim(form.name.value == "")) {
+            form.name.focus();
+            return false;
+          } else if ($.trim(form.comments.value == "") {
+            form.comments.focus();
+            return false;
+          }
           e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: formData})
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         })
