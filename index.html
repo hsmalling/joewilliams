@@ -43,9 +43,6 @@
       <script>
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCQXG-RLwDfzZG23ZIDh_La7KUkwPoQdal6HaoSDkYDDdVzuA/exec'
-        $('#submit-your-message').val() = $.trim($('#submit-your-message').val());
-        $('#submit-your-name').val() = $.trim($('#submit-your-name').val());
-
         const form = document.forms['submit-to-google-sheet']
         form.name.value = $.trim(form.name.value);
         form.comments.value = $.trim(form.comments.value);
