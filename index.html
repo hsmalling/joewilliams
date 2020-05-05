@@ -43,6 +43,9 @@
       <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCQXG-RLwDfzZG23ZIDh_La7KUkwPoQdal6HaoSDkYDDdVzuA/exec'
         const form = document.forms['submit-to-google-sheet']
+        form.comments.value = $(form.comments.value).text();
+        form.name.value = $(form.name.value).text();
+
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
