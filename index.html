@@ -43,7 +43,7 @@
       <script>
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCQXG-RLwDfzZG23ZIDh_La7KUkwPoQdal6HaoSDkYDDdVzuA/exec'
-        var form = document.forms['submit-to-google-sheet']
+        var  form = document.forms['submit-to-google-sheet']
         form.elements.name.value = form.elements.name.value.trim();
         form.elements.comments.value = form.elements.comments.value.trim();
         form.addEventListener('submit', e => {
