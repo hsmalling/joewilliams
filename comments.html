@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="container">
-        <div class="panel panel-default">
+        <div class="row">
           <div class="media">
-            <div class="results"></div>
+            <div class="results media"></div>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
 
           $('.results').prepend(
             // '<div>' + '<p class="comments">' + this.gsx$comments.$t  + '</p>' + '<strong class="names">' + this.gsx$name.$t + '</strong>' + '</div>'
-            '<div>' + '<p class="media-body">' + $(tempComment).text()  + '<span>' + ' ' + '</span>' + '<strong class="names">' + $(tempName).text() + '</strong>' + '</p>' + '</div>'
+            '<div class="row comment">' + '<p class="">' + $(tempComment).text()  + '<span>' + ' ' + '</span>' + '<strong class="user">' + $(tempName).text() + '</strong>' + '</p>' + '</div>'
 
           );
         });
