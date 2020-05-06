@@ -47,7 +47,6 @@
         // form.name.value = form.name.value.trim();
         // form.comments.value = form.comments.value.trim();
         form.addEventListener('submit', e => {
-          e.preventDefault()
           // if ($.trim(form.name.value) == '') {
           //   form.name.focus();
           //   return false;
@@ -62,6 +61,8 @@
             form.comments.focus();
             return false;
           }
+          e.preventDefault()
+          
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
