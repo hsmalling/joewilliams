@@ -44,8 +44,8 @@
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCQXG-RLwDfzZG23ZIDh_La7KUkwPoQdal6HaoSDkYDDdVzuA/exec'
         const form = document.forms['submit-to-google-sheet']
-        form.name.value = form.name.value.trim();
-        form.comments.value = form.comments.value.trim();
+        form["name"].value = form["name"].value.trim();
+        form["comments"].value = form["comments"]value.trim();
         form.addEventListener('submit', e => {
           e.preventDefault()
           // if ($.trim(form.name.value) == '') {
@@ -55,10 +55,10 @@
           //   form.comments.focus();
           //   return false;
           // }
-          if (form.name.value == '') {
+          if (form["name"].value == '') {
             form.name.focus();
             return false;
-          } else if (form.comments.value == '') {
+          } else if (form["comments"].value == '') {
             form.comments.focus();
             return false;
           }
