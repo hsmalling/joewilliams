@@ -31,8 +31,15 @@
 
         $(entry).each(function () {
           // Column names are name, age, etc.
+          var tempComment = document.createElement("p");
+          var tempName = document.createElement("p");
+          $(tempComment).text(this.gsx$comments.$t);
+          $(tempName).text(this.gsx$name.$t);
+
           $('.results').prepend(
-            '<div>' + '<p>' + this.gsx$comments.$t  + '</p>' + '<strong>' + this.gsx$name.$t + '</strong>' + '</div>'
+            // '<div>' + '<p class="comments">' + this.gsx$comments.$t  + '</p>' + '<strong class="names">' + this.gsx$name.$t + '</strong>' + '</div>'
+            '<div>' + '<p class="comments">' + tempComment  + '</p>' + '<strong class="names">' + tempName + '</strong>' + '</div>'
+
           );
         });
       });
