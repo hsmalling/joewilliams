@@ -10,7 +10,7 @@
   <body>
     <div class="container">
         <div class="panel panel-default">
-          <div class="panel-body">
+          <div class="media">
             <div class="results"></div>
           </div>
         </div>
@@ -38,7 +38,7 @@
 
           $('.results').prepend(
             // '<div>' + '<p class="comments">' + this.gsx$comments.$t  + '</p>' + '<strong class="names">' + this.gsx$name.$t + '</strong>' + '</div>'
-            '<div>' + '<p class="post-body">' + $(tempComment).text()  + '<span>' + ' ' + '</span>' + '<strong class="names">' + $(tempName).text() + '</strong>' + '</p>' + '</div>'
+            '<div>' + '<p class="media-body">' + $(tempComment).text()  + '<span>' + ' ' + '</span>' + '<strong class="names">' + $(tempName).text() + '</strong>' + '</p>' + '</div>'
 
           );
         });
