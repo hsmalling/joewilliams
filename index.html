@@ -13,7 +13,7 @@
       <div class="col-md-6">
         <div class="widget-area no-padding blank">
           <div class="status-upload">
-            <form name="submit-to-google-sheet">
+            <form name="submit-to-google-sheet" id="condolenceForm">
                 <div class="">
                   <label for="submit-your-name">Your Name</label>
                   <input class="form-control" type="text" id="submit-your-name" name="name" value="" size="30" maxlength="128" required>
@@ -72,6 +72,7 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .then($('.success').text("Thank You, Your Submission has been received"))
+            .then($('#condolenceForm')).hide()
             .catch(error => console.error('Error!', error.message))
         })
 
