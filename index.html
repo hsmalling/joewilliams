@@ -44,8 +44,8 @@
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCQXG-RLwDfzZG23ZIDh_La7KUkwPoQdal6HaoSDkYDDdVzuA/exec'
         const form = document.forms['submit-to-google-sheet']
-        form["name"].value = form["name"].value.trim();
-        form["comments"].value = form["comments"]value.trim();
+        form.elements.name.value = form.elements.name.value.trim();
+        form.elements.comments.value = form.elements.comments.value.trim();
         form.addEventListener('submit', e => {
           e.preventDefault()
           // if ($.trim(form.name.value) == '') {
