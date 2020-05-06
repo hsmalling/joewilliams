@@ -57,7 +57,7 @@
 
         form.addEventListener('submit', e => {
           e.preventDefault()
-          $form[name='registration'].validate({
+          $("form[name='registration']").validate({
             rules: {
               name: "required",
               comments: "required"
