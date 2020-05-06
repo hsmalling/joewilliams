@@ -32,7 +32,7 @@
         $(entry).each(function () {
           // Column names are name, age, etc.
           $('.results').prepend(
-            '<p>' + this.gsx$comments.$t.text() + ' - '  + '<span>'+ '<strong>' + this.gsx$name.$t.text() + '</strong>' + '</span>' + '</p>'
+            '<p>' + $.text(this.gsx$comments.$t) + ' - '  + '<span>'+ '<strong>' + $.text(this.gsx$name.$t) + '</strong>' + '</span>' + '</p>'
           );
         });
       });
