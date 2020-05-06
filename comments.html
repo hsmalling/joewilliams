@@ -11,7 +11,7 @@
     <div class="container">
         <div class="">
           <div class="card">
-            <div class="results card-body"></div>
+            <div class="results"></div>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
 
           $('.results').prepend(
             // '<div>' + '<p class="comments">' + this.gsx$comments.$t  + '</p>' + '<strong class="names">' + this.gsx$name.$t + '</strong>' + '</div>'
-            '<div>' + '<p class="comments">' + $(tempComment).text()  + '<span>' + ' ' + '</span>' + '<strong class="names">' + $(tempName).text() + '</strong>' + '</p>' + '</div>'
+            '<div>' + '<p class="post-body">' + $(tempComment).text()  + '<span>' + ' ' + '</span>' + '<strong class="names">' + $(tempName).text() + '</strong>' + '</p>' + '</div>'
 
           );
         });
