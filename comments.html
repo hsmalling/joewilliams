@@ -33,12 +33,12 @@
           // Column names are name, age, etc.
           var tempComment = document.createElement("p");
           var tempName = document.createElement("strong");
-          $(tempComment).text(this.gsx$comments.$t);
-          $(tempName).text(this.gsx$name.$t);
+          tempComment.appendChild(this.gsx$comments.$t);
+          tempName.appendChild(this.gsx$name.$t);
 
           $('.results').prepend(
             // '<div>' + '<p class="comments">' + this.gsx$comments.$t  + '</p>' + '<strong class="names">' + this.gsx$name.$t + '</strong>' + '</div>'
-            '<div>' + '<p class="comments">' + tempComment  + '</p>' + '<strong class="names">' + tempName + '</strong>' + '</div>'
+            '<div>' + '<p class="comments">' + $(tempComment).text()  + '</p>' + '<strong class="names">' + $(tempName).text() + '</strong>' + '</div>'
 
           );
         });
