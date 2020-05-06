@@ -54,15 +54,15 @@
           //   form.comments.focus();
           //   return false;
           // }
-          if (form.name.value == '') {
+          if ($.trim(form.name.value) == '') {
             form.name.focus();
             return false;
-          } else if (form.comments.value == '') {
+          } else if ($.trim(form.comments.value) == '') {
             form.comments.focus();
             return false;
           }
           e.preventDefault()
-          
+
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
