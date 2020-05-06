@@ -71,7 +71,7 @@
 
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
-            .then($(.success).text("Thank You, Your Submission has been received")
+            .then($('.success').text("Thank You, Your Submission has been received")
             .catch(error => console.error('Error!', error.message))
         })
 
