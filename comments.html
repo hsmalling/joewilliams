@@ -8,7 +8,7 @@
     <title></title>
   </head>
   <body>
-    <div class="container">
+    <div class="">
       <div class="results"></div>
     </div>
 
@@ -35,8 +35,8 @@
           $('.results').prepend(
             // '<div>' + '<p class="comments">' + this.gsx$comments.$t  + '</p>' + '<strong class="names">' + this.gsx$name.$t + '</strong>' + '</div>'
             // '<div class="row comment">' + '<p class="">' + $(tempComment).text()  + '<span>' + ' ' + '</span>' + '<strong class="user">' + $(tempName).text() + '</strong>' + '</p>' + '</div>'
-            '<div class="row comment">' + '<div class="head">' + '<small> ' + '<strong class="user">' + $(tempName).text() + '</strong>' + '</small>' + '</div>' + '<p class="">' + $(tempComment).text()   + '</p>' + '</div>'
-
+            // '<div class="row comment">' + '<div class="head">' + '<small> ' +  + '</small>' + '</div>' + '<p class="">' + $(tempComment).text()   +  + '</div>'
+            '<hr />' +  '<p class="">' + $(tempComment).text()   + '</p>' + '<strong class="user">' + $(tempName).text() + '</strong>' + '</p>'
           );
         });
       });
